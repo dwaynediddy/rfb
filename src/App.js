@@ -1,11 +1,25 @@
+import React, { Component } from 'react';
+import Result from './components/Result'
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <h2>React for Beginners</h2>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+      super()
+
+      this.state = {
+          result: ""
+      }
+  }
+  render() {
+      return (
+          <div>
+              <div className="calculator">
+                  <Result result={this.state.result} />
+              </div>            
+          </div>
+      )
+  }
 }
 
 export default App;
